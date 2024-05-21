@@ -1,16 +1,16 @@
 class StringBuilder {
-    #value = [];
+    #value = "";
     constructor(initialValue){
-        this.#value.push(initialValue);
+        this.#value = initialValue;
     }
     getValue() {
-    return this.#value.join("");
+    return this.#value;
     }
     padEnd(str) {
-    this.#value.push(str);
+    this.#value += str;
     }
     padStart(str) {
-    this.#value.unshift(str);
+    this.#value = str + this.#value;
     }
     padBoth(str){
         this.padEnd(str);
